@@ -23,11 +23,11 @@ import fastr
 import metric
 
 def dumpSelectedTestCases(prog, v, method, B, inputFile, sel, scd):
-	testCases = [line.rstrip("\n") for line in open(inputFile)]
-	selectedCasesFile = open(scd + "/{}_{}.txt".format(method, B), "w")
+	print(method + ":")
+	fileListFile="input/{}_{}/{}-tests.txt".format(prog, v, prog)
+	testFiles = [line.rstrip("\n") for line in open(fileListFile)]
 	for i in sel:
-		selectedCasesFile.write(testCases[i-1]+"\n")
-	selectedCasesFile.close()
+		print("\t" + testFiles[i-1])
 
 """
 This file runs all FAST-R algorithms (fastr_adequate.py) and the

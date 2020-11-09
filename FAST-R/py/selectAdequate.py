@@ -22,12 +22,12 @@ import competitors
 import fastr_adequate
 import metric
 
-def dumpSelectedTestCases(prog, v, method, inputFile, sel, scd):
-	testCases = [line.rstrip("\n") for line in open(inputFile)]
-	selectedCasesFile = open(scd + "/{}.txt".format(method), "w")
+def printSelectedTestCases(prog, v, method, inputFile, sel, scd):
+	print(method + ":")
+	fileListFile="input/{}_{}/{}-tests.txt".format(prog, v, prog)
+	testFiles = [line.rstrip("\n") for line in open(fileListFile)]
 	for i in sel:
-		selectedCasesFile.write(testCases[i-1]+"\n")
-	selectedCasesFile.close()
+		print("\t" + format(testFiles[i-1]))
 
 """
 This file runs all FAST-R algorithms (fastr_adequate.py) and the
@@ -81,22 +81,22 @@ if __name__ == "__main__":
 	tPath = outpath + "measures/"
 
 	pTime, cTime, rTime, sel = fastr_adequate.fastPlusPlus(inputFile, wBoxFile, dim=dim)
-	dumpSelectedTestCases(prog, v, "FAST++", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST++", inputFile, sel, scd)
 
 	pTime, cTime, rTime, sel = fastr_adequate.fastCS(inputFile, wBoxFile, dim=dim)
-	dumpSelectedTestCases(prog, v, "FAST-CS", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-CS", inputFile, sel, scd)
 
 	pTime, cTime, rTime, sel = fastr_adequate.fast_pw(inputFile, wBoxFile, r=r, b=b, bbox=True, k=k, memory=True)
-	dumpSelectedTestCases(prog, v, "FAST-pw", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-pw", inputFile, sel, scd)
 
 	sTime, cTime, pTime, sel = fastr_adequate.fast_(inputFile, wBoxFile, all_, r=r, b=b, bbox=True, k=k, memory=True)
-	dumpSelectedTestCases(prog, v, "FAST-f", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-f", inputFile, sel, scd)
 
 	pTime, rTime, sel = competitors.gaAdequacy(wBoxFile)
-	dumpSelectedTestCases(prog, v, "GA", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "GA", inputFile, sel, scd)
 
 	pTime, rTime, sel = competitors.artdAdequacy(wBoxFile)
-	dumpSelectedTestCases(prog, v, "ARTD", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "ARTD", inputFile, sel, scd)
 
 	pTime, rTime, sel = competitors.artfAdequacy(wBoxFile)
-	dumpSelectedTestCases(prog, v, "ARTF", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "ARTF", inputFile, sel, scd)
