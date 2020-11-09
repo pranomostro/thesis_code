@@ -1,0 +1,5 @@
+Automatically check whether to prioritize & execute or just execute?
+Test reduction that requires
+	Test code
+	Test coverage information ({statement, branch, function, call-stack})
+	Test execution
