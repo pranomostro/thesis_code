@@ -22,8 +22,8 @@ import competitors
 import fastr_adequate
 import metric
 
-def printSelectedTestCases(prog, v, method, inputFile, sel, scd):
-	print(method + ":")
+def printSelectedTestCases(prog, v, method, sel, pTime, cTime, rTime):
+	print(method, ptime, cTime, rTime)
 	fileListFile="input/{}_{}/{}-tests.txt".format(prog, v, prog)
 	testFiles = [line.rstrip("\n") for line in open(fileListFile)]
 	for i in sel:
@@ -52,10 +52,6 @@ if __name__ == "__main__":
 	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1")]
 	script, covType, prog, v = sys.argv
 
-	scd = "selectedAdequate-{}/{}_{}/".format(covType, prog, v)
-	if not os.path.exists(scd):
-		os.makedirs(scd)
-
 	# FAST parameters
 	k, n, r, b = 5, 10, 1, 10
 	dim = 10
@@ -81,22 +77,22 @@ if __name__ == "__main__":
 	tPath = outpath + "measures/"
 
 	pTime, cTime, rTime, sel = fastr_adequate.fastPlusPlus(inputFile, wBoxFile, dim=dim)
-	printSelectedTestCases(prog, v, "FAST++", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST++", sel, pTime, cTime, rTime)
 
 	pTime, cTime, rTime, sel = fastr_adequate.fastCS(inputFile, wBoxFile, dim=dim)
-	printSelectedTestCases(prog, v, "FAST-CS", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-CS", sel, pTime, cTime, rTime)
 
 	pTime, cTime, rTime, sel = fastr_adequate.fast_pw(inputFile, wBoxFile, r=r, b=b, bbox=True, k=k, memory=True)
-	printSelectedTestCases(prog, v, "FAST-pw", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-pw", sel, pTime, cTime, rTime)
 
 	sTime, cTime, pTime, sel = fastr_adequate.fast_(inputFile, wBoxFile, all_, r=r, b=b, bbox=True, k=k, memory=True)
-	printSelectedTestCases(prog, v, "FAST-f", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "FAST-f", sel, pTime+sTime, cTime, 0.0)
 
 	pTime, rTime, sel = competitors.gaAdequacy(wBoxFile)
-	printSelectedTestCases(prog, v, "GA", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "GA", sel, ptime, 0.0, rTime)
 
 	pTime, rTime, sel = competitors.artdAdequacy(wBoxFile)
-	printSelectedTestCases(prog, v, "ARTD", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "ARTD", sel, pTime, 0.0, rTime)
 
 	pTime, rTime, sel = competitors.artfAdequacy(wBoxFile)
-	printSelectedTestCases(prog, v, "ARTF", inputFile, sel, scd)
+	printSelectedTestCases(prog, v, "ARTF", sel, pTime, 0.0, rTime)

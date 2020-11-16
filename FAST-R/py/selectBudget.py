@@ -22,12 +22,12 @@ import competitors
 import fastr
 import metric
 
-def dumpSelectedTestCases(prog, v, method, B, inputFile, sel, scd):
-	print(method + ":")
+def measureTestCaseSelection(prog, v, method, sel, pTime, rTime):
+	print(method, pTime, rTime)
 	fileListFile="input/{}_{}/{}-tests.txt".format(prog, v, prog)
 	testFiles = [line.rstrip("\n") for line in open(fileListFile)]
 	for i in sel:
-		print("\t" + testFiles[i-1])
+		print("\t" + format(testFiles[i-1]))
 
 """
 This file runs all FAST-R algorithms (fastr_adequate.py) and the
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 		exit()
 
 	SIR = [("flex", "v3"), ("grep", "v3"), ("gzip", "v1"), ("sed", "v6"), ("make", "v1")]
-	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1")]
+	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1"), ("commons-lang", "3.11"), ("commons-math", "3.6")]
 	script, covType, prog, v, B = sys.argv
 
 	B = int(B)
@@ -81,23 +81,24 @@ if __name__ == "__main__":
 		faultMatrix = "input/{}_{}/fault_matrix_key_tc.pickle".format(prog, v)
 
 	pTime, rTime, sel = fastr.fastPlusPlus(inputFile, dim=dim, B=B)
-	dumpSelectedTestCases(prog, v, "FAST++", B, inputFile, sel, scd)
+	fdl = metric.fdl(sel, faultMatrix, javaFlag)
+	measureTestCaseSelection(prog, v, "FAST++", sel, pTime, rTime)
 
 	pTime, rTime, sel = fastr.fastCS(inputFile, dim=dim, B=B)
-	dumpSelectedTestCases(prog, v, "FAST-CS", B, inputFile, sel, scd)
+	measureTestCaseSelection(prog, v, "FAST-CS", sel, pTime, rTime)
 
 	pTime, rTime, sel = fastr.fast_pw(inputFile, r, b, bbox=True, k=k, memory=True, B=B)
-	dumpSelectedTestCases(prog, v, "FAST-pw", B, inputFile, sel, scd)
+	measureTestCaseSelection(prog, v, "FAST-pw", sel, pTime, rTime)
 
 	pTime, rTime, sel = fastr.fast_(inputFile, all_, r=r, b=b, bbox=True, k=k, memory=True, B=B)
-	dumpSelectedTestCases(prog, v, "FAST-f", B, inputFile, sel, scd)
+	measureTestCaseSelection(prog, v, "FAST-all", sel, pTime, rTime)
 
 	# WHITEBOX APPROACHES
 	pTime, rTime, sel = competitors.ga(wBoxFile, B=B)
-	dumpSelectedTestCases(prog, v, "GA", B, inputFile, sel, scd)
+	rintSelectedTestCases(prog, v, "GA", sel, ptime, rTime)
 
 	pTime, rTime, sel = competitors.artd(wBoxFile, B=B)
-	dumpSelectedTestCases(prog, v, "ARTD", B, inputFile, sel, scd)
+	measureTestCaseSelection(prog, v, "ARTD", sel, pTime, rTime)
 
 	pTime, rTime, sel = competitors.artf(wBoxFile, B=B)
-	dumpSelectedTestCases(prog, v, "ARTF", B, inputFile, sel, scd)
+	measureTestCaseSelection(prog, v, "ARTF", sel, pTime, rTime)

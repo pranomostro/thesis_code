@@ -122,6 +122,7 @@ if __name__ == "__main__":
 		pickle.dump(sel, open(sOut, "wb"))
 		tOut = "{}/{}-{}.pickle".format(tPath, "FAST-all", run+1)
 		pickle.dump((pTime, cTime, rTime, fdl, tsr), open(tOut, "wb"))
+		# rTime is not initialized here! Wut! TODO!
 		print("FAST-all", pTime, cTime, rTime, fdl, tsr)
 
 
