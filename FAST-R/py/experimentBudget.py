@@ -43,7 +43,7 @@ if __name__ == "__main__":
 		print(usage)
 		exit()
 
-	SIR = [("flex", "v3"), ("grep", "v3"), ("gzip", "v1"), ("sed", "v6"), ("make", "v1")]
+	SIR = [("flex", "v3"), ("grep", "v3"), ("gzip", "v1"), ("sed", "v6"), ("make", "v1"), ("jsoup", "1.13.1")]
 	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1")]
 	script, covType, prog, v, rep = sys.argv
 	repetitions = int(rep)

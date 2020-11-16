@@ -24,6 +24,7 @@ import metric
 
 def measureTestCaseSelection(prog, v, method, sel, pTime, rTime):
 	print(method, pTime, rTime)
+	print(sel)
 	fileListFile="input/{}_{}/{}-tests.txt".format(prog, v, prog)
 	testFiles = [line.rstrip("\n") for line in open(fileListFile)]
 	for i in sel:
@@ -50,8 +51,8 @@ if __name__ == "__main__":
 		print(usage)
 		exit()
 
-	SIR = [("flex", "v3"), ("grep", "v3"), ("gzip", "v1"), ("sed", "v6"), ("make", "v1")]
-	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1"), ("commons-lang", "3.11"), ("commons-math", "3.6")]
+	SIR = [("flex", "v3"), ("grep", "v3"), ("gzip", "v1"), ("sed", "v6"), ("make", "v1"), ("commons-lang", "3.11"), ("commons-math", "3.6"), ("jsoup", "1.13.1")]
+	D4J = [("math", "v1"), ("closure", "v1"), ("time", "v1"), ("lang", "v1"), ("chart", "v1")]
 	script, covType, prog, v, B = sys.argv
 
 	B = int(B)
@@ -79,6 +80,9 @@ if __name__ == "__main__":
 		faultMatrix = "input/{}_{}/fault_matrix.txt".format(prog, v)
 	else:
 		faultMatrix = "input/{}_{}/fault_matrix_key_tc.pickle".format(prog, v)
+
+	print(javaFlag)
+	print(faultMatrix)
 
 	pTime, rTime, sel = fastr.fastPlusPlus(inputFile, dim=dim, B=B)
 	fdl = metric.fdl(sel, faultMatrix, javaFlag)

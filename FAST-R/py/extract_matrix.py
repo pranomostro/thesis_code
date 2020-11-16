@@ -1,5 +1,6 @@
 import re
 import sys
+import pickle
 
 import xml.dom.minidom as xmd
 from collections import OrderedDict
@@ -45,5 +46,12 @@ for p in doc.firstChild.getElementsByTagName("mutation"):
 	for k in killers:
 		faultmatrix[killerindex[k]].add(victimindex[victim])
 
+savematrix=dict()
+
 for j in range(1, i-1):
-	print(' '.join([str(i) for i in list(faultmatrix[j])]))
+	savematrix[j]=sorted(list(faultmatrix[j]))
+
+print(savematrix)
+
+sOut="input/{}_{}/fault_matrix_key_tc.pickle".format(program, version)
+pickle.dump(savematrix, open(sOut, "wb"))
