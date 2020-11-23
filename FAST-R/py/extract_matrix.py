@@ -48,10 +48,11 @@ for p in doc.firstChild.getElementsByTagName("mutation"):
 
 savematrix=dict()
 
-for j in range(1, i-1):
+for j in range(1, i):
 	savematrix[j]=sorted(list(faultmatrix[j]))
 
-print(savematrix)
+for j in range(1, len(savematrix)+1):
+	print(" ".join([str(p) for p in savematrix[j]]))
 
 sOut="input/{}_{}/fault_matrix_key_tc.pickle".format(program, version)
 pickle.dump(savematrix, open(sOut, "wb"))
