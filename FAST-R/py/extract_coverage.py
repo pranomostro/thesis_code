@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import re
 import sys
 import pickle
@@ -18,13 +20,13 @@ def setoflines(s, pl):
 			lines=lines.union(set(range(lo, hi+1)))
 	return lines
 
-_, program, version = sys.argv
+_, program = sys.argv
 
 testindex=dict()
 linescovered=dict()
 linespreceding=dict()
 
-f=open("input/{}_{}/{}-tests.txt".format(program, version, program))
+f=open("./{}-tests.txt".format(program))
 i=1
 for case in f:
 	testindex[case.replace('\n', '')]=i
@@ -36,7 +38,7 @@ for j in range(1, i):
 	except:
 		linescovered[j]=set()
 
-ld=open("input/{}_{}/source-lines.txt".format(program, version))
+ld=open("./source-lines.txt")
 total=0
 for l in ld:
 	nol=int(l.split(" ")[0])
@@ -44,7 +46,7 @@ for l in ld:
 	linespreceding[fn]=total
 	total=total+nol
 
-cov=open("input/{}_{}/coverage.json".format(program, version))
+cov=open("./coverage.json")
 jsondata=json.load(cov)
 
 cov.close()
@@ -69,7 +71,7 @@ coverageinfo=dict()
 for j in range(1, i):
 	coverageinfo[j]=sorted(list(linescovered[j]))
 
-covf=open("input/{}_{}/{}-line.txt".format(program, version, program), "w")
+covf=open("./{}-line.txt".format(program), "w")
 
 for j in range(1, len(coverageinfo)+1):
 	covf.write(" ".join([str(p) for p in coverageinfo[j]])+"\n")

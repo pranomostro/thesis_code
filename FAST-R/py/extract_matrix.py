@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import re
 import sys
 import pickle
@@ -5,14 +7,14 @@ import pickle
 import xml.dom.minidom as xmd
 from collections import OrderedDict
 
-_, program, version = sys.argv
+_, program = sys.argv
 
 victimindex=dict()
 killerindex=dict()
 
 faultmatrix=OrderedDict()
 
-f=open("input/{}_{}/{}-tests.txt".format(program, version, program))
+f=open("./{}-tests.txt".format(program))
 i=1
 for case in f:
 	killerindex[case.replace('\n', '')]=i
@@ -28,7 +30,7 @@ victimcounter=1
 
 f.close()
 
-doc=xmd.parse("input/{}_{}/mutations.xml".format(program, version))
+doc=xmd.parse("./mutations.xml")
 
 for p in doc.firstChild.getElementsByTagName("mutation"):
 	try:
@@ -51,8 +53,12 @@ savematrix=dict()
 for j in range(1, i):
 	savematrix[j]=sorted(list(faultmatrix[j]))
 
-for j in range(1, len(savematrix)+1):
-	print(" ".join([str(p) for p in savematrix[j]]))
-
-sOut="input/{}_{}/fault_matrix_key_tc.pickle".format(program, version)
+sOut="./fault_matrix_key_tc.pickle"
 pickle.dump(savematrix, open(sOut, "wb"))
+
+fmf=open("./fault_matrix.txt".format(program), "w")
+
+for j in range(1, len(faultmatrix)+1):
+	fmf.write(" ".join([str(p) for p in savematrix[j]])+"\n")
+
+fmf.close()
