@@ -61,10 +61,13 @@ for t in jsondata["tests"]:
 		continue
 	for p in t["paths"]:
 		for f in p["files"]:
-			l=f["coveredLines"]
-			preceding=linespreceding[p["path"]+"/"+f["fileName"]]
-			ti=testindex[test]
-			linescovered[ti]=linescovered[ti].union((setoflines(l, preceding)))
+			try:
+				l=f["coveredLines"]
+				preceding=linespreceding[p["path"]+"/"+f["fileName"]]
+				ti=testindex[test]
+				linescovered[ti]=linescovered[ti].union((setoflines(l, preceding)))
+			except:
+				continue
 
 coverageinfo=dict()
 

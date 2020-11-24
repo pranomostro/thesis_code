@@ -1,0 +1,1 @@
+package com.fibonacci;  import com.fibonacci.Fibonacci; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*;  public class FibTest { 	@Test public void returnValueTest() { 		assertEquals(5,Fibonacci.fib(5)); 		assertEquals(144, Fibonacci.fib(12)); 		assertEquals(832040, Fibonacci.fib(30)); 	} } 

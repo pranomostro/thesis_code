@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mutations>
+  <mutation detected="false" status="SURVIVED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>13</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator</mutator>
+    <index>5</index>
+    <block>0</block>
+    <killingTests/>
+    <succeedingTests>com.fibonacci.FibTest.returnValueTest()</succeedingTests>
+    <description>changed conditional boundary</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>19</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator</mutator>
+    <index>30</index>
+    <block>3</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>changed conditional boundary</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>18</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator</mutator>
+    <index>24</index>
+    <block>2</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>Changed increment from -2 to 2</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>19</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator</mutator>
+    <index>29</index>
+    <block>3</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>Changed increment from -1 to 1</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>20</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.MathMutator</mutator>
+    <index>35</index>
+    <block>4</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>Replaced integer addition with subtraction</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>13</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator</mutator>
+    <index>5</index>
+    <block>0</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>negated conditional</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>19</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator</mutator>
+    <index>30</index>
+    <block>3</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>negated conditional</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>14</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator</mutator>
+    <index>9</index>
+    <block>1</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>replaced int return with 0 for com/fibonacci/Fibonacci::fib</description>
+  </mutation>
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>fib</mutatedMethod>
+    <methodDescription>(I)I</methodDescription>
+    <lineNumber>24</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator</mutator>
+    <index>50</index>
+    <block>5</block>
+    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <succeedingTests/>
+    <description>replaced int return with 0 for com/fibonacci/Fibonacci::fib</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>main</mutatedMethod>
+    <methodDescription>([Ljava/lang/String;)V</methodDescription>
+    <lineNumber>5</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator</mutator>
+    <index>6</index>
+    <block>0</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>changed conditional boundary</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>main</mutatedMethod>
+    <methodDescription>([Ljava/lang/String;)V</methodDescription>
+    <lineNumber>5</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator</mutator>
+    <index>6</index>
+    <block>0</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>negated conditional</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>main</mutatedMethod>
+    <methodDescription>([Ljava/lang/String;)V</methodDescription>
+    <lineNumber>6</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator</mutator>
+    <index>10</index>
+    <block>1</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>removed call to java/lang/System::exit</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>main</mutatedMethod>
+    <methodDescription>([Ljava/lang/String;)V</methodDescription>
+    <lineNumber>8</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator</mutator>
+    <index>25</index>
+    <block>5</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>removed call to java/io/PrintStream::print</description>
+  </mutation>
+  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+    <sourceFile>Fibonacci.java</sourceFile>
+    <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
+    <mutatedMethod>main</mutatedMethod>
+    <methodDescription>([Ljava/lang/String;)V</methodDescription>
+    <lineNumber>9</lineNumber>
+    <mutator>org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator</mutator>
+    <index>30</index>
+    <block>6</block>
+    <killingTests/>
+    <succeedingTests/>
+    <description>removed call to java/io/PrintStream::print</description>
+  </mutation>
+</mutations>
