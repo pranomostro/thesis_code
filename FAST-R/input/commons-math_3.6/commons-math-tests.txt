@@ -158,6 +158,7 @@ org.apache.commons.math4.optim.nonlinear.scalar.MultivariateFunctionPenaltyAdapt
 org.apache.commons.math4.optim.nonlinear.scalar.noderiv.SimplexOptimizerNelderMeadTest
 org.apache.commons.math4.optim.nonlinear.scalar.noderiv.OptimTestUtils
 org.apache.commons.math4.optim.nonlinear.scalar.noderiv.PowellOptimizerTest
+org.apache.commons.math4.optim.nonlinear.scalar.noderiv.CMAESOptimizerTest
 org.apache.commons.math4.optim.nonlinear.scalar.noderiv.SimplexOptimizerMultiDirectionalTest
 org.apache.commons.math4.optim.nonlinear.scalar.noderiv.BOBYQAOptimizerTest
 org.apache.commons.math4.optim.nonlinear.scalar.MultivariateFunctionMappingAdapterTest

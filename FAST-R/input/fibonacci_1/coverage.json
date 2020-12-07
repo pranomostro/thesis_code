@@ -1,86 +1,6 @@
 {
   "tests": [
     {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testYahooArticle()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testYahooArticle()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testXwikiExpanded()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testXwikiExpanded()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testNewsHomepage()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testNewsHomepage()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testWikiExpandedFromString()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ParseTest.testWikiExpandedFromString()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.parser.ParserIT.handlesDeepStack()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.parser.ParserIT.handlesDeepStack()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.helper.W3CDomTest.convertsGoogle()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.helper.W3CDomTest.convertsGoogle()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.helper.DataUtilTest.discardsSpuriousByteOrderMark()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.helper.DataUtilTest.discardsSpuriousByteOrderMark()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.nodes.ElementIT.testFastReparentExistingContent()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.nodes.ElementIT.testFastReparentExistingContent()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.nodes.ElementIT.testFastReparent()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.nodes.ElementIT.testFastReparent()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ConnectTest.handlesUnknownEscapesAcrossBuffer()"
-    },
-    {
-      "paths": [],
-      "uniformPath": "org.jsoup.integration.ConnectTest.handlesUnknownEscapesAcrossBuffer()"
-    },
-    {
       "paths": [
         {
           "files": [
@@ -99,8 +19,26 @@
       "uniformPath": "com.fibonacci.FibTest.returnValueTest()"
     },
     {
+      "paths": [
+        {
+          "files": [
+            {
+              "coveredLines": "13-14",
+              "fileName": "Fibonacci.java"
+            }
+          ],
+          "path": "com/fibonacci"
+        }
+      ],
+      "uniformPath": "com.fibonacci.IllegalValuesTest.returnValueTest()"
+    },
+    {
       "paths": [],
-      "uniformPath": "com.fibonacci.FibTest.returnValueTest()"
+      "uniformPath": "com.fibonacci.IllegalValuesTest.returnValueTest()"
+    },
+    {
+      "paths": [],
+      "uniformPath": "com.fibonacci.IllegalValuesTest.returnValueTest()"
     }
   ]
 }

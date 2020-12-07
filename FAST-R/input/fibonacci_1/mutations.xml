@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mutations>
-  <mutation detected="false" status="SURVIVED" numberOfTestsRun="1">
+  <mutation detected="false" status="SURVIVED" numberOfTestsRun="2">
     <sourceFile>Fibonacci.java</sourceFile>
     <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
     <mutatedMethod>fib</mutatedMethod>
@@ -10,7 +10,7 @@
     <index>5</index>
     <block>0</block>
     <killingTests/>
-    <succeedingTests>com.fibonacci.FibTest.returnValueTest()</succeedingTests>
+    <succeedingTests>com.fibonacci.IllegalValuesTest.returnValueTest()|com.fibonacci.FibTest.returnValueTest()</succeedingTests>
     <description>changed conditional boundary</description>
   </mutation>
   <mutation detected="true" status="KILLED" numberOfTestsRun="1">
@@ -65,7 +65,7 @@
     <succeedingTests/>
     <description>Replaced integer addition with subtraction</description>
   </mutation>
-  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
+  <mutation detected="true" status="KILLED" numberOfTestsRun="2">
     <sourceFile>Fibonacci.java</sourceFile>
     <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
     <mutatedMethod>fib</mutatedMethod>
@@ -74,7 +74,7 @@
     <mutator>org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator</mutator>
     <index>5</index>
     <block>0</block>
-    <killingTests>com.fibonacci.FibTest.returnValueTest()</killingTests>
+    <killingTests>com.fibonacci.IllegalValuesTest.returnValueTest()|com.fibonacci.FibTest.returnValueTest()</killingTests>
     <succeedingTests/>
     <description>negated conditional</description>
   </mutation>
@@ -91,7 +91,7 @@
     <succeedingTests/>
     <description>negated conditional</description>
   </mutation>
-  <mutation detected="false" status="NO_COVERAGE" numberOfTestsRun="0">
+  <mutation detected="true" status="KILLED" numberOfTestsRun="1">
     <sourceFile>Fibonacci.java</sourceFile>
     <mutatedClass>com.fibonacci.Fibonacci</mutatedClass>
     <mutatedMethod>fib</mutatedMethod>
@@ -100,7 +100,7 @@
     <mutator>org.pitest.mutationtest.engine.gregor.mutators.PrimitiveReturnsMutator</mutator>
     <index>9</index>
     <block>1</block>
-    <killingTests/>
+    <killingTests>com.fibonacci.IllegalValuesTest.returnValueTest()</killingTests>
     <succeedingTests/>
     <description>replaced int return with 0 for com/fibonacci/Fibonacci::fib</description>
   </mutation>

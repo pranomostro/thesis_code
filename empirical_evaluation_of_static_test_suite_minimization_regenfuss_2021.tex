@@ -10,7 +10,7 @@
 \usepackage{hyperref}
 \usepackage{natbib}
 
-\title{Empirical Evaluation of Static Test Suite Minimization}
+\title{Empirical Evaluation of Test Suite Reduction}
 \author{Adrian Regenfuß}
 
 \begin{document}
@@ -20,18 +20,80 @@
 %TODO: create table of contents
 
 \begin{abstract}
-Yes, there's an abstract here.
+As a response to ever-growing test suites with long runtimes, several
+different approaches have been developed to reduce the time for test
+suite execution to give useful results. One of these approaches is test
+suite reduction: selecting a sample of tests that maximizes coverage on
+the tested source code. This paper attempts to replicate the findings
+in \citealt{cruciani2019scalable}, which borrows techniques from big
+data to handle very large test suites. We use independently generated
+testing data from open source projects, and find that TODO.
 \end{abstract}
 
 \section{Introduction}
 
 \section{Related Work}
 
+\section{Handling Large Test Suites}
+
+\subsection{Methods}
+
+\subsubsection{Test Case Selection}
+
+\subsubsection{Test Case Priorization}
+
+\subsubsection{Test Suite Reduction}
+
+\subsection{Algorithms for Reduction}
+
+\subsubsection{Greedy Selection}
+
+%Needs coverage information
+
+\subsubsection{Clustering}
+
+%Very indirect.
+
+\subsubsection{Searching}
+
+\subsubsection{Hybrids}
+
+\subsection{Classifying the FAST algorithms}
+
 \section{Preparation}
+
+\subsection{Gathering Data}
+
+\subsubsection{Selecting Projects}
+
+%Medium-Sized Java Projects
+
+\subsubsection{Generating Coverage Information}
+
+%Only Line Coverage
+%Using Teamscale Jacoco Agent
+
+\subsubsection{Collecting Fault Coverage Information}
+
+%Using Pitest
+
+\subsubsection{Combining Tests Suites}
 
 \section{Method}
 
 \section{Results}
+
+\subsection{Test Suite Reduction}
+
+\subsection{Fault Detection Loss}
+
+\subsection{Running Time}
+
+\subsection{Comparison to ''Scalable Approaches to Test Suite Reduction''}
+
+\section{Limitations}
+
+\section{Future Work}
 
 \section{Summary}
 
