@@ -270,7 +270,7 @@ def artdAdequacy(input_file, B=0):
 				round(100*iteration/total, 2)))
 			sys.stdout.flush()
 
-		if len(C) == 0:
+		while len(C) == 0:
 			C = generate(U)
 		s = select(TS, P, C)
 		P.append(s)
