@@ -89,8 +89,9 @@ def loadSignatures(input_file):
 			tcID += 1
 	return sig, time.perf_counter() - start
 
-
-def loadCoverage(wBoxFile):
+# TODO: These fuckers have botched the implementation, loadCoverage
+# has an off-by-one error. Maybe track down.
+def loadCoverageStart1(wBoxFile):
 	C = defaultdict(set)
 	with open(wBoxFile) as fin:
 		for tc, cov in enumerate(fin):
@@ -105,7 +106,7 @@ def fast_pw(input_file, wBoxFile, r, b, bbox=False, k=5, memory=False):
 	n = r * b  # number of hash functions
 
 	tC0 = time.perf_counter()
-	C = loadCoverage(wBoxFile)
+	C = loadCoverageStart1(wBoxFile)
 	tC1 = time.perf_counter()
 	maxCov = reduce(lambda x, y: x | y, C.values())
 
@@ -224,7 +225,7 @@ def fast_(input_file, wBoxFile, selsize, r, b, bbox=False, k=5, memory=False):
 	n = r * b  # number of hash functions
 
 	tC0 = time.perf_counter()
-	C = loadCoverage(wBoxFile)
+	C = loadCoverageStart1(wBoxFile)
 	tC1 = time.perf_counter()
 	maxCov = reduce(lambda x, y: x | y, C.values())
 
