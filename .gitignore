@@ -1,1 +1,10 @@
 *.pickle
+*.exec
+*/__pycache__/*
+__pycache__
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.toc

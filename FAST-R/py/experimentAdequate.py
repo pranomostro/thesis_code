@@ -149,7 +149,6 @@ if __name__ == "__main__":
 		pickle.dump((pTime, cTime, rTime, fdl, tsr), open(tOut, "wb"))
 		print("ART-D", pTime, cTime, rTime, fdl, tsr)
 
-
 	for run in range(repeats):
 		pTime, rTime, sel = competitors.artfAdequacy(wBoxFile)
 		cTime = 0.0
@@ -160,3 +159,14 @@ if __name__ == "__main__":
 		tOut = "{}/{}-{}.pickle".format(tPath, "ART-F", run+1)
 		pickle.dump((pTime, cTime, rTime, fdl, tsr), open(tOut, "wb"))
 		print("ART-F", pTime, cTime, rTime, fdl, tsr)
+
+	for run in range(repeats):
+		pTime, rTime, sel = competitors.random_selection_adequate(wBoxFile)
+		cTime = 0.0
+		fdl = metric.fdl(sel, faultMatrix, javaFlag)
+		tsr = metric.tsr(sel, inputFile)
+		sOut = "{}/{}-{}.pickle".format(sPath, "RS", run+1)
+		pickle.dump(sel, open(sOut, "wb"))
+		tOut = "{}/{}-{}.pickle".format(tPath, "RS", run+1)
+		pickle.dump((pTime, cTime, rTime, fdl, tsr), open(tOut, "wb"))
+		print("RS", pTime, cTime, rTime, fdl, tsr)

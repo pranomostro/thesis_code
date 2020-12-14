@@ -1,1 +1,5 @@
 commons-lang 3.11
+commons-math 3.6
+commons-collections 4.3
+jopt-simple 6
+jsoup 1.13.1

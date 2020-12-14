@@ -151,3 +151,12 @@ if __name__ == "__main__":
 			tOut = "{}/{}-{}-{}.pickle".format(tPath, "ART-F", reduction, run+1)
 			pickle.dump((pTime, rTime, fdl), open(tOut, "wb"))
 			print("ART-F", reduction, pTime, rTime, fdl)
+
+		for run in range(repeats):
+			pTime, rTime, sel = competitors.random_selection(wBoxFile, B=B)
+			fdl = metric.fdl(sel, faultMatrix, javaFlag)
+			sOut = "{}/{}-{}-{}.pickle".format(sPath, "RS", reduction, run+1)
+			pickle.dump(sel, open(sOut, "wb"))
+			tOut = "{}/{}-{}-{}.pickle".format(tPath, "RS", reduction, run+1)
+			pickle.dump((pTime, rTime, fdl), open(tOut, "wb"))
+			print("RS", reduction, pTime, rTime, fdl)

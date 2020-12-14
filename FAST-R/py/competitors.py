@@ -205,7 +205,10 @@ def artd(input_file, B=0):
 		if len(P) >= B+1:
 			break
 
-		del U[s]
+		try:
+			del U[s]
+		except:
+			pass
 		C = C - set([s])
 
 	ptime = time.perf_counter() - ptime_start
@@ -280,7 +283,10 @@ def artdAdequacy(input_file, B=0):
 			break
 
 		Cg = Cg | U[s]
-		del U[s]
+		try:
+			del U[s]
+		except:
+			pass
 		C = C - set([s])
 
 	ptime = time.perf_counter() - ptime_start
@@ -445,3 +451,34 @@ def artfAdequacy(input_file, B=0):
 
 	return 0.0, ptime, P[1:]
 
+# REGENFUẞ (Random Selection)
+
+def random_selection(input_file, B=0):
+	ptime_start = time.perf_counter()
+	TS = loadTestSuite(input_file)
+	sel=random.sample(list(range(1,len(TS)+1)), min(B, len(TS)))
+	ptime = time.perf_counter() - ptime_start
+	return 0.0, ptime, sel
+
+# REGENFUẞ (Random Adequate Selection)
+
+def random_selection_adequate(input_file, B=0):
+	ptime_start = time.perf_counter()
+	TS = loadTestSuite(input_file)
+
+	selcov=set()
+	allcov=set()
+	for k in list(TS.keys()):
+		allcov=allcov.union(TS[k])
+
+	tests=set(range(1, len(TS)+1))
+	sel=list()
+
+	while len(tests)>0 and len(allcov.difference(selcov))>0:
+		selected=random.sample(tests, 1)[0]
+		sel.append(selected)
+		tests.remove(selected)
+		selcov=selcov.union(TS[selected])
+
+	ptime = time.perf_counter() - ptime_start
+	return 0.0, ptime, sel

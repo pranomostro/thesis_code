@@ -10,19 +10,23 @@
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Clustering}{subsection.3.2}% 10
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Searching}{subsection.3.2}% 11
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Hybrids}{subsection.3.2}% 12
-\BOOKMARK [2][-]{subsection.3.3}{Classifying the FAST algorithms}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Preparation}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Gathering Data}{section.4}% 15
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Selecting Projects}{subsection.4.1}% 16
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Generating Coverage Information}{subsection.4.1}% 17
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Collecting Fault Coverage Information}{subsection.4.1}% 18
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Combining Tests Suites}{subsection.4.1}% 19
-\BOOKMARK [1][-]{section.5}{Method}{}% 20
-\BOOKMARK [1][-]{section.6}{Results}{}% 21
-\BOOKMARK [2][-]{subsection.6.1}{Test Suite Reduction}{section.6}% 22
-\BOOKMARK [2][-]{subsection.6.2}{Fault Detection Loss}{section.6}% 23
-\BOOKMARK [2][-]{subsection.6.3}{Running Time}{section.6}% 24
-\BOOKMARK [2][-]{subsection.6.4}{Comparison to ''Scalable Approaches to Test Suite Reduction''}{section.6}% 25
-\BOOKMARK [1][-]{section.7}{Limitations}{}% 26
-\BOOKMARK [1][-]{section.8}{Future Work}{}% 27
-\BOOKMARK [1][-]{section.9}{Summary}{}% 28
+\BOOKMARK [2][-]{subsection.3.3}{Algorithms Used}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.3.1}{FAST}{subsection.3.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Adaptive Random Testing}{subsection.3.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Greedy Algorithm}{subsection.3.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Random Selection}{subsection.3.3}% 17
+\BOOKMARK [1][-]{section.4}{Preparation}{}% 18
+\BOOKMARK [2][-]{subsection.4.1}{Gathering Data}{section.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Selecting Projects}{subsection.4.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Generating Coverage Information}{subsection.4.1}% 21
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Collecting Fault Coverage Information}{subsection.4.1}% 22
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Combining Tests Suites}{subsection.4.1}% 23
+\BOOKMARK [1][-]{section.5}{Method}{}% 24
+\BOOKMARK [1][-]{section.6}{Results}{}% 25
+\BOOKMARK [2][-]{subsection.6.1}{Test Suite Reduction}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.2}{Fault Detection Loss}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.3}{Running Time}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.4}{Comparison to ''Scalable Approaches to Test Suite Reduction''}{section.6}% 29
+\BOOKMARK [1][-]{section.7}{Limitations}{}% 30
+\BOOKMARK [1][-]{section.8}{Future Work}{}% 31
+\BOOKMARK [1][-]{section.9}{Summary}{}% 32
