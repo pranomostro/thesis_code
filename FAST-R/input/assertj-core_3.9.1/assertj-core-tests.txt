@@ -800,7 +800,6 @@ org.assertj.core.api.byte_.ByteAssert_isNotCloseToPercentage_byte_Test
 org.assertj.core.api.JUnitBDDSoftAssertionsSuccessTest
 org.assertj.core.api.Char2DArrayAssertBaseTest
 org.assertj.core.api.Assertions_assertThat_with_Float_Test
-org.assertj.core.api.SoftAssertionsTest
 org.assertj.core.api.ByteArrayAssertBaseTest
 org.assertj.core.api.short2darray.Short2DArrayAssert_contains_at_Index_Test
 org.assertj.core.api.short2darray.Short2DArrayAssert_hasDimensions_Test
@@ -898,7 +897,6 @@ org.assertj.core.api.BooleanArrayAssertBaseTest
 org.assertj.core.api.Java6JUnitBDDSoftAssertionsFailureTest
 org.assertj.core.api.DoublePredicateAssertBaseTest
 org.assertj.core.api.ConcreteComparableAssert
-org.assertj.core.api.BDDSoftAssertionsTest
 org.assertj.core.api.Assertions_assertThat_with_DoubleArray_Test
 org.assertj.core.api.Assertions_assertThat_with_OptionalLong_Test
 org.assertj.core.api.Assertions_assertThat_asString_Test
@@ -1772,7 +1770,6 @@ org.assertj.core.api.future.FutureAssert_succeedsWithin_duration_Test
 org.assertj.core.api.FileAssertBaseTest
 org.assertj.core.api.DoubleArrayAssertBaseTest
 org.assertj.core.api.Object2DArrayAssertBaseTest
-org.assertj.core.api.AutoCloseableBDDSoftAssertionsTest
 org.assertj.core.api.Assertions_catchThrowableOfType_Test
 org.assertj.core.api.IterableAssertBaseTest
 org.assertj.core.api.AbstractOffsetDateTimeAssertBaseTest
@@ -1919,10 +1916,8 @@ org.assertj.core.api.abstract_.AbstractAssert_describedAs_with_text_description_
 org.assertj.core.api.abstract_.AbstractAssert_isInstanceOf_Test
 org.assertj.core.api.abstract_.AbstractAssert_isNotNull_Test
 org.assertj.core.api.abstract_.AbstractAssert_isNull_Test
-org.assertj.core.api.abstract_.SoftAssertionsMultipleProjectsTest
 org.assertj.core.api.abstract_.AbstractAssert_extracting_with_Function_and_AssertFactory_Test
 org.assertj.core.api.abstract_.AbstractAssert_isNotIn_with_vararg_Test
-org.assertj.core.api.abstract_.SoftAssertions_overriding_afterAssertionErrorCollected_Test
 org.assertj.core.api.abstract_.AbstractAssert_describedAs_with_description_Test
 org.assertj.core.api.abstract_.AbstractAssert_hasToString_Test
 org.assertj.core.api.abstract_.AbstractAssert_describedAs_consumed_by_configured_consumer_Test
@@ -1941,13 +1936,11 @@ org.assertj.core.api.abstract_.AbstractAssert_doesNotHaveSameClassAs_Test
 org.assertj.core.api.abstract_.AbstractAssert_overridingErrorMessage_Test
 org.assertj.core.api.abstract_.AbstractAssert_doesNotHaveToString_Test
 org.assertj.core.api.abstract_.AbstractAssert_isExactlyInstanceOf_Test
-org.assertj.core.api.abstract_.SoftAssertions_setAfterAssertionErrorCollected_Test
 org.assertj.core.api.abstract_.AbstractAssert_failWithMessage_Test
 org.assertj.core.api.abstract_.AbstractAssert_as_with_text_description_Test
 org.assertj.core.api.abstract_.AbstractAssert_withRepresentation_Test
 org.assertj.core.api.abstract_.AbstractAssert_isIn_with_array_Test
 org.assertj.core.api.abstract_.AbstractAssert_isSameAs_Test
-org.assertj.core.api.abstract_.SoftAssertionsErrorsCollectedTest
 org.assertj.core.api.abstract_.AbstractAssert_satisfies_with_Condition_Test
 org.assertj.core.api.abstract_.AbstractAssert_failWithActualExpectedAndMessage_Test
 org.assertj.core.api.abstract_.AbstractAssert_doesNotHave_Test
@@ -2197,7 +2190,6 @@ org.assertj.core.error.ShouldContainRecursively_create_Test
 org.assertj.core.error.ShouldHaveStamp_create_Test
 org.assertj.core.error.ShouldBeEqual_assertj_elements_stack_trace_filtering_Test
 org.assertj.core.error.ShouldBeInSameHourWindow_create_Test
-org.assertj.core.error.AssertJMultipleFailuresError_getMessage_Test
 org.assertj.core.error.ShouldBePeriod_create_test
 org.assertj.core.error.ShouldBeAbstract_create_Test
 org.assertj.core.error.ShouldBeEqual_newAssertionError_without_JUnit_and_OTA4J_Test
