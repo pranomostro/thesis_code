@@ -1,3 +1,4 @@
+assertj-core 3.9.1
 commons-lang 3.11
 commons-math 3.6
 commons-collections 4.3
