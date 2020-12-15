@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.4)  15 DEC 2020 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.4)  15 DEC 2020 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,17 +381,17 @@ LaTeX Info: Redefining \nameref on input line 16.
 
  [2] [3] [4]
 (./empirical_evaluation_of_test_suite_reduction_regenfuss_2021.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 147.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
 
 (./empirical_evaluation_of_test_suite_reduction_regenfuss_2021.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 147.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 147.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
 Package rerunfilecheck Info: File `empirical_evaluation_of_test_suite_reduction
 _regenfuss_2021.out' has not changed.
 (rerunfilecheck)             Checksum: 06D3AF944FD8A8D8D27A0EEC82DCDE6A;2804.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 147.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
  7524 strings out of 481239
@@ -410,7 +410,7 @@ fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti10.pfb>
 Output written on empirical_evaluation_of_test_suite_reduction_regenfuss_2021.p
-df (5 pages, 125548 bytes).
+df (5 pages, 125999 bytes).
 PDF statistics:
  283 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams
