@@ -25,15 +25,13 @@
 \BOOKMARK [3][-]{subsubsection.4.3.3}{Collecting Fault Coverage Information}{subsection.4.3}% 25
 \BOOKMARK [3][-]{subsubsection.4.3.4}{Combining Tests Suites}{subsection.4.3}% 26
 \BOOKMARK [2][-]{subsection.4.4}{Results}{section.4}% 27
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Test Suite Reduction}{subsection.4.4}% 28
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Fault Detection Loss}{subsection.4.4}% 29
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Running Time}{subsection.4.4}% 30
-\BOOKMARK [2][-]{subsection.4.5}{Discussion}{section.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Comparison to ''Scalable Approaches to Test Suite Reduction''}{subsection.4.5}% 32
-\BOOKMARK [2][-]{subsection.4.6}{Threats to Validity}{section.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Conclusion Validity}{subsection.4.6}% 34
-\BOOKMARK [3][-]{subsubsection.4.6.2}{Internal Validity}{subsection.4.6}% 35
-\BOOKMARK [3][-]{subsubsection.4.6.3}{Construct Validity}{subsection.4.6}% 36
-\BOOKMARK [3][-]{subsubsection.4.6.4}{External Validity}{subsection.4.6}% 37
-\BOOKMARK [1][-]{section.5}{Future Work}{}% 38
-\BOOKMARK [1][-]{section.6}{Summary}{}% 39
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Running Time}{subsection.4.4}% 28
+\BOOKMARK [2][-]{subsection.4.5}{Discussion}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Comparison to ''Scalable Approaches to Test Suite Reduction''}{subsection.4.5}% 30
+\BOOKMARK [2][-]{subsection.4.6}{Threats to Validity}{section.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Conclusion Validity}{subsection.4.6}% 32
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Internal Validity}{subsection.4.6}% 33
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Construct Validity}{subsection.4.6}% 34
+\BOOKMARK [3][-]{subsubsection.4.6.4}{External Validity}{subsection.4.6}% 35
+\BOOKMARK [1][-]{section.5}{Future Work}{}% 36
+\BOOKMARK [1][-]{section.6}{Summary}{}% 37

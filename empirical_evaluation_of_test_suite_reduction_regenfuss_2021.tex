@@ -33,6 +33,8 @@ testing data from open source projects, and find that TODO.
 
 \section{Introduction}
 
+3 pages
+
 To prevent the introduction (or re-introduction) of bugs, software
 developers often test their software after making changes to it.
 This is known as regression testing, and takes up a significant portion
@@ -44,7 +46,11 @@ This work attempts to determine how different test suite reduction
 strategies compare to each other in terms of time performance, fault
 detection loss and magnitude of reduction.
 
+\section{Terms and Definitions}
+
 \section{Related Work}
+
+5 pages
 
 \subsection{Handling Large Test Suites}
 
@@ -58,11 +64,9 @@ detection loss and magnitude of reduction.
 
 \subsubsection{Greedy Selection}
 
-%Needs coverage information
+Needs coverage information
 
 \subsubsection{Clustering}
-
-%Very indirect.
 
 \subsubsection{Searching}
 
@@ -70,11 +74,19 @@ detection loss and magnitude of reduction.
 
 \section{Approach}
 
+8 pages
+
 \subsection{Replicating ''Scalable Approaches for Test Suite Reduction''}
+
+1 page
 
 \subsection{Algorithms Used}
 
+7 pages
+
 \subsubsection{FAST}
+
+4 pages
 
 \paragraph{FAST++}
 
@@ -86,17 +98,39 @@ detection loss and magnitude of reduction.
 
 \subsubsection{Adaptive Random Testing}
 
+2 pages
+
 \paragraph{ART-D}
 
 \paragraph{ART-F}
 
 \subsubsection{Greedy Algorithm}
 
+$\frac{1}{2}$ a page
+
 \subsubsection{Random Selection}
+
+$\frac{1}{2}$ a page
+
+New method, after \citealt[p. 17]{khan2018systematic}
 
 \section{Evaluation}
 
+17 pages
+
 \subsection{Research Questions}
+
+\paragraph{Research Question 1: Does the Relative Effectiveness of the Different Algorithms Replicate the Results in \citealt{cruciani2019scalable}?}
+
+\subparagraph{Research Question 1.1: Does Their Relative Effectiveness in TSR Replicate the Findings in \citealt{cruciani2019scalable}?}
+
+\subparagraph{Research Question 1.2: Does Their Relative Effectiveness in FDL Replicate the Findings in \citealt{cruciani2019scalable}?}
+
+\paragraph{Research Question 2: Does the Relative Runtime Performance of the Different Algorithms Replicate the Results in \citealt{cruciani2019scalable}?}
+
+\paragraph{Research Question 3: How Much Better Than Random Selection are Specialized Algorithms?}
+
+\paragraph{(Possibly) Research Question 4: Do the Results in \citealt{cruciani2019scalable} Replicate with the Original Test Data?}
 
 \subsection{Study Setup}
 
@@ -104,24 +138,33 @@ detection loss and magnitude of reduction.
 
 \subsubsection{Selecting Projects}
 
-%Medium-Sized Java Projects
+Medium-Sized Java Projects
+
+assertj-core, commons-lang, commons-math, commons-collections, jopt-simple, jsoup
 
 \subsubsection{Generating Coverage Information}
 
-%Only Line Coverage
-%Using Teamscale Jacoco Agent
+Only Line Coverage
+
+Using Teamscale Jacoco Agent
 
 \subsubsection{Collecting Fault Coverage Information}
 
-%Using Pitest
+Using Pitest
 
 \subsubsection{Combining Tests Suites}
 
 \subsection{Results}
 
-\subsubsection{Test Suite Reduction}
+\paragraph{Research Question 1.1}
 
-\subsubsection{Fault Detection Loss}
+\paragraph{Research Question 1.2}
+
+\paragraph{Research Question 2}
+
+\paragraph{Research Question 3}
+
+\paragraph{(Possibly) Research Question 4}
 
 \subsubsection{Running Time}
 
@@ -141,7 +184,11 @@ detection loss and magnitude of reduction.
 
 \section{Future Work}
 
+1 page
+
 \section{Summary}
+
+2 pages
 
 \newpage
 
