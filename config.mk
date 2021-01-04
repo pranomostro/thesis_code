@@ -1,2 +1,0 @@
-PL=pdflatex
-PLFLAGS=
