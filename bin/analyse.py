@@ -11,8 +11,6 @@ descstat=[("mean", statistics.mean), ("median", statistics.median), ("stdev", st
 
 rounds=50
 
-# Project->Method->[pTime, cTime, rTime, fdl, tsr]
-
 adequate=defaultdict()
 budget=defaultdict()
 
@@ -21,7 +19,7 @@ for m in methods:
 	budget[m]=defaultdict()
 	for me in range(0, len(admetrics)):
 		adequate[m][admetrics[me]]=list()
-		for i in range(1, 51):
+		for i in range(1, rounds+1):
 			for p in projects:
 				tadequate=pickle.load(open("./outputAdequate-line/"+p+"/measures/"+m+"-"+str(i)+".pickle", "rb"))
 				if admetrics[me]=='total':
@@ -30,7 +28,7 @@ for m in methods:
 					adequate[m][admetrics[me]].append(tadequate[me])
 	for me in range(0, len(bumetrics)):
 		budget[m][bumetrics[me]]=list()
-		for i in range(1, 51):
+		for i in range(1, rounds+1):
 			for p in projects:
 				tbudget=pickle.load(open("./outputBudget-line/"+p+"/measures/"+m+"-1-"+str(i)+".pickle", "rb"))
 				if bumetrics[me]=='total':
