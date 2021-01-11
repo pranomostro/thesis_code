@@ -1,3 +1,24 @@
+Questions
+
+Paper describing long running times for test suites?
+
+Budd TA. Mutation analysis of program test data. 1980
+
+Andrews JH, Briand LC, Labiche Y. Proceedings of the 27th International
+Conference on Software Engineering (ICSE 2005). ACM Press: New York,
+2005
+
+D. Achlioptas, "Database-friendly random projections:
+Johnson-Lindenstrauss with binary coins", 2003
+
+W. B. Johnson and J. Lindesstrauss, "Extensions of lipschitz appings
+into a hilbert space"
+
+D. Arthur and S. Vassilvitskii, "k-means++: The advantages of careful
+seeding", 2007
+
+--------------------
+
 4. Section has no subsections
 
 Move 3.1 & 3.2 into Related Work
