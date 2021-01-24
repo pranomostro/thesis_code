@@ -2,6 +2,7 @@ import pickle
 import statistics
 from os import listdir
 from collections import defaultdict
+from scipy import stats
 
 projects=['jsoup_1.13.1', 'commons-collections_4.3', 'commons-math_3.6', 'assertj-core_3.9.1', 'jopt-simple_6', 'commons-lang_3.11']
 methods=['ART-D', 'ART-F', 'FAST++', 'FAST-all', 'FAST-CS', 'FAST-pw', 'GA', 'RS']
@@ -50,3 +51,44 @@ for m in methods:
 		budescriptive[m][bumetrics[me]]=defaultdict()
 		for d in descstat:
 			budescriptive[m][bumetrics[me]][d[0]]=d[1](budget[m][bumetrics[me]])
+
+adranks=defaultdict() #keys: tsr, fdl, rtime, total
+buranks=defaultdict() #keys: fdl, rtime, total
+
+for a in admetrics:
+	medians=[addescriptive[m][a]['median'] for m in methods]
+	values=[adequate[m][a] for m in methods]
+	valuesaftermedians=[v for _,v in sorted(zip(medians,values))]
+	methodsaftermedians=[v for _,v in sorted(zip(medians,methods))]
+	adranks[a]=defaultdict()
+	adranks[a]["medians"]=sorted(medians)
+	adranks[a]["methods"]=methodsaftermedians
+	adranks[a]["rank"]=[]
+	for i in range(0, len(values)-1):
+		if valuesaftermedians[i]==valuesaftermedians[i+1]:
+			adranks[a]["rank"].append("=")
+			continue
+		vals=stats.kruskal(valuesaftermedians[i],valuesaftermedians[i+1])
+		if vals[1]<0.05:
+			adranks[a]["rank"].append(">")
+		else:
+			adranks[a]["rank"].append("=")
+
+for b in bumetrics:
+	medians=[budescriptive[m][b]['median'] for m in methods]
+	values=[budget[m][b] for m in methods]
+	valuesaftermedians=[v for _,v in sorted(zip(medians,values))]
+	methodsaftermedians=[v for _,v in sorted(zip(medians,methods))]
+	buranks[b]=defaultdict()
+	buranks[b]["medians"]=sorted(medians)
+	buranks[b]["methods"]=methodsaftermedians
+	buranks[b]["rank"]=[]
+	for i in range(0, len(values)-1):
+		if valuesaftermedians[i]==valuesaftermedians[i+1]:
+			buranks[b]["rank"].append("=")
+			continue
+		vals=stats.kruskal(valuesaftermedians[i],valuesaftermedians[i+1])
+		if vals[1]<0.05:
+			buranks[b]["rank"].append(">")
+		else:
+			buranks[b]["rank"].append("=")

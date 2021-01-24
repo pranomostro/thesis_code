@@ -8,4 +8,4 @@ while read p; do
 	/usr/bin/python3 py/experimentAdequate.py line $program $version 50
 	echo Budget
 	/usr/bin/python3 py/experimentBudget.py line $program $version 1
-done <programs.txt
+done <$1
