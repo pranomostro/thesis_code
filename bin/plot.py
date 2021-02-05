@@ -6,30 +6,30 @@ source=f.read()
 exec(source)
 f.close()
 
-budgetfdls=[]
+tsrs=[]
 for k in adequate.keys():
-	budgetfdls.append([100*x for x in budget[k]['fdl']])
+	tsrs.append([100*x for x in adequate[k]['tsr']])
 
 fig, ax = plt.subplots(figsize = (8,5), sharex = True)
 ax.set_ylim(0, 100)
-ax.boxplot(budgetfdls, labels=adequate.keys())
+ax.boxplot(tsrs, labels=adequate.keys())
 plt.xticks(rotation=90)
 plt.tight_layout()
 
-plt.savefig("budgetfdls.png")
+plt.savefig("tsrs.png")
 
-adeq=[]
+fdls=[]
 lbls=[]
 for k in adequate.keys():
-	adeq.append([100*x for x in adequate[k]['tsr']])
-	adeq.append([100*x for x in adequate[k]['fdl']])
-	lbls.append(k+' (TSR)')
-	lbls.append(k+' (FDL)')
+	fdls.append([100*x for x in adequate[k]['fdl']])
+	fdls.append([100*x for x in budget[k]['fdl']])
+	lbls.append(k+' (adequate)')
+	lbls.append(k+' (budget)')
 
 fig, ax = plt.subplots(figsize = (8,5), sharex = True)
 plt.xticks(rotation=90)
 ax.set_ylim(0, 100)
-ax.boxplot(adeq, labels=lbls)
+ax.boxplot(fdls, labels=lbls)
 plt.tight_layout()
 
-plt.savefig("adequatemetrics")
+plt.savefig("fdls.png")

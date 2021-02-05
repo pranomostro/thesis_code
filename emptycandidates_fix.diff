@@ -1,0 +1,28 @@
+diff --git a/FAST-R/py/competitors.py b/FAST-R/py/competitors.py
+index 3695a06..1e2c2c8 100644
+--- a/FAST-R/py/competitors.py
++++ b/FAST-R/py/competitors.py
+@@ -205,7 +205,10 @@ def artd(input_file, B=0):
+                if len(P) >= B+1:
+                        break
+ 
+-               del U[s]
++               try:
++                       del U[s]
++               except:
++                       pass
+                C = C - set([s])
+ 
+        ptime = time.perf_counter() - ptime_start
+@@ -280,7 +283,10 @@ def artdAdequacy(input_file, B=0):
+                        break
+ 
+                Cg = Cg | U[s]
+-               del U[s]
++               try:
++                       del U[s]
++               except:
++                       pass
+                C = C - set([s])
+ 
+        ptime = time.perf_counter() - ptime_start
